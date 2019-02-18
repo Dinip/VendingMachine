@@ -24,7 +24,6 @@ Partial Class MainInterface
     Private Sub InitializeComponent()
         Me.keys_btn = New System.Windows.Forms.Button()
         Me.keypad_screen_lbl = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -55,6 +54,7 @@ Partial Class MainInterface
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
+        Me.coin_in_btn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'keys_btn
@@ -84,19 +84,6 @@ Partial Class MainInterface
         Me.keypad_screen_lbl.Size = New System.Drawing.Size(60, 17)
         Me.keypad_screen_lbl.TabIndex = 3
         Me.keypad_screen_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(586, 463)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(72, 152)
-        Me.Button1.TabIndex = 4
-        Me.Button1.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -428,6 +415,19 @@ Partial Class MainInterface
         Me.Label30.TabIndex = 34
         Me.Label30.Text = "13"
         '
+        'coin_in_btn
+        '
+        Me.coin_in_btn.BackColor = System.Drawing.Color.Transparent
+        Me.coin_in_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.coin_in_btn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.coin_in_btn.FlatAppearance.BorderSize = 0
+        Me.coin_in_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.coin_in_btn.Location = New System.Drawing.Point(586, 105)
+        Me.coin_in_btn.Name = "coin_in_btn"
+        Me.coin_in_btn.Size = New System.Drawing.Size(72, 162)
+        Me.coin_in_btn.TabIndex = 36
+        Me.coin_in_btn.UseVisualStyleBackColor = False
+        '
         'MainInterface
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -435,6 +435,7 @@ Partial Class MainInterface
         Me.BackgroundImage = Global.Vending.My.Resources.Resources.vending_ps_render_low_res
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(684, 888)
+        Me.Controls.Add(Me.coin_in_btn)
         Me.Controls.Add(Me.Label30)
         Me.Controls.Add(Me.Label29)
         Me.Controls.Add(Me.Label28)
@@ -465,7 +466,6 @@ Partial Class MainInterface
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.keypad_screen_lbl)
         Me.Controls.Add(Me.keys_btn)
         Me.Cursor = System.Windows.Forms.Cursors.Default
@@ -478,7 +478,6 @@ Partial Class MainInterface
 
     Friend WithEvents keys_btn As Button
     Friend WithEvents keypad_screen_lbl As Label
-    Friend WithEvents Button1 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
@@ -509,4 +508,5 @@ Partial Class MainInterface
     Friend WithEvents Label28 As Label
     Friend WithEvents Label29 As Label
     Friend WithEvents Label30 As Label
+    Friend WithEvents coin_in_btn As Button
 End Class

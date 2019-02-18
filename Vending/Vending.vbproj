@@ -141,5 +141,8 @@
   <ItemGroup>
     <None Include="Resources\only_pad.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin_insert.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

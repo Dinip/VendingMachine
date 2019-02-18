@@ -124,4 +124,7 @@
   <data name="only_pad" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\only_pad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="coin_insert" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coin_insert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
