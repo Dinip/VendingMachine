@@ -143,13 +143,13 @@ Partial Class Coins_Insert
         Me.saldo_lbl.BackColor = System.Drawing.Color.Transparent
         Me.saldo_lbl.Cursor = System.Windows.Forms.Cursors.No
         Me.saldo_lbl.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.saldo_lbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.saldo_lbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.saldo_lbl.ForeColor = System.Drawing.SystemColors.WindowText
         Me.saldo_lbl.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.saldo_lbl.Location = New System.Drawing.Point(113, 104)
+        Me.saldo_lbl.Location = New System.Drawing.Point(111, 104)
         Me.saldo_lbl.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.saldo_lbl.Name = "saldo_lbl"
-        Me.saldo_lbl.Size = New System.Drawing.Size(189, 67)
+        Me.saldo_lbl.Size = New System.Drawing.Size(194, 67)
         Me.saldo_lbl.TabIndex = 10
         '
         'btn_clear_saldo

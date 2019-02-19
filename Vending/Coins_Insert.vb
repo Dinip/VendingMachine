@@ -1,4 +1,6 @@
-﻿Public Class Coins_Insert
+﻿Imports System.ComponentModel
+
+Public Class Coins_Insert
     Dim saldo As Single
     Private Sub Coins_Insert_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Button 1c
@@ -67,46 +69,50 @@
 
     Private Sub btn1c_Click(sender As Object, e As EventArgs) Handles btn1c.Click
         saldo = saldo + 0.01
-        saldo_lbl.Text = "+0,01" & vbNewLine & "Saldo: " & saldo
+        saldo_lbl.Text = "+0,01 €" & vbNewLine & "Saldo: " & saldo & "€"
     End Sub
 
     Private Sub btn2c_Click(sender As Object, e As EventArgs) Handles btn2c.Click
         saldo = saldo + 0.02
-        saldo_lbl.Text = "+0,02" & vbNewLine & "Saldo: " & saldo
+        saldo_lbl.Text = "+0,02 €" & vbNewLine & "Saldo: " & saldo & "€"
     End Sub
 
     Private Sub btn5c_Click(sender As Object, e As EventArgs) Handles btn5c.Click
         saldo = saldo + 0.05
-        saldo_lbl.Text = "+0,05" & vbNewLine & "Saldo: " & saldo
+        saldo_lbl.Text = "+0,05 €" & vbNewLine & "Saldo: " & saldo & "€"
     End Sub
 
     Private Sub btn10c_Click(sender As Object, e As EventArgs) Handles btn10c.Click
         saldo = saldo + 0.1
-        saldo_lbl.Text = "+0,10" & vbNewLine & "Saldo: " & saldo
+        saldo_lbl.Text = "+0,10 €" & vbNewLine & "Saldo: " & saldo & "€"
     End Sub
 
     Private Sub btn20c_Click(sender As Object, e As EventArgs) Handles btn20c.Click
         saldo = saldo + 0.2
-        saldo_lbl.Text = "+0,20" & vbNewLine & "Saldo: " & saldo
+        saldo_lbl.Text = "+0,20 €" & vbNewLine & "Saldo: " & saldo & "€"
     End Sub
 
     Private Sub btn50c_Click(sender As Object, e As EventArgs) Handles btn50c.Click
         saldo = saldo + 0.5
-        saldo_lbl.Text = "+0,50" & vbNewLine & "Saldo: " & saldo
+        saldo_lbl.Text = "+0,50 €" & vbNewLine & "Saldo: " & saldo & "€"
     End Sub
 
     Private Sub btn1e_Click(sender As Object, e As EventArgs) Handles btn1e.Click
         saldo = saldo + 1
-        saldo_lbl.Text = "+1,00" & vbNewLine & "Saldo: " & saldo
+        saldo_lbl.Text = "+1,00 €" & vbNewLine & "Saldo: " & saldo & "€"
     End Sub
 
     Private Sub btn2e_Click(sender As Object, e As EventArgs) Handles btn2e.Click
         saldo = saldo + 2
-        saldo_lbl.Text = "+2,00" & vbNewLine & "Saldo: " & saldo
+        saldo_lbl.Text = "+2,00 €" & vbNewLine & "Saldo: " & saldo & "€"
     End Sub
 
     Private Sub btn_clear_saldo_Click(sender As Object, e As EventArgs) Handles btn_clear_saldo.Click
         saldo = 0
-        saldo_lbl.Text = "0,00" & vbNewLine & "Saldo: " & saldo
+        saldo_lbl.Text = "0,00 €" & vbNewLine & "Saldo: " & saldo & "€"
+    End Sub
+
+    Private Sub Coins_Insert_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        MainInterface.Controls("saldo_lbl").Text = saldo
     End Sub
 End Class

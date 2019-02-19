@@ -55,6 +55,7 @@ Partial Class MainInterface
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.coin_in_btn = New System.Windows.Forms.Button()
+        Me.saldo_lbl = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'keys_btn
@@ -428,6 +429,20 @@ Partial Class MainInterface
         Me.coin_in_btn.TabIndex = 36
         Me.coin_in_btn.UseVisualStyleBackColor = False
         '
+        'saldo_lbl
+        '
+        Me.saldo_lbl.BackColor = System.Drawing.Color.Transparent
+        Me.saldo_lbl.Cursor = System.Windows.Forms.Cursors.No
+        Me.saldo_lbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.saldo_lbl.ForeColor = System.Drawing.Color.Black
+        Me.saldo_lbl.Location = New System.Drawing.Point(593, 124)
+        Me.saldo_lbl.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.saldo_lbl.Name = "saldo_lbl"
+        Me.saldo_lbl.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.saldo_lbl.Size = New System.Drawing.Size(57, 23)
+        Me.saldo_lbl.TabIndex = 37
+        Me.saldo_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'MainInterface
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -435,6 +450,7 @@ Partial Class MainInterface
         Me.BackgroundImage = Global.Vending.My.Resources.Resources.vending_ps_render_low_res
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(684, 888)
+        Me.Controls.Add(Me.saldo_lbl)
         Me.Controls.Add(Me.coin_in_btn)
         Me.Controls.Add(Me.Label30)
         Me.Controls.Add(Me.Label29)
@@ -469,6 +485,8 @@ Partial Class MainInterface
         Me.Controls.Add(Me.keypad_screen_lbl)
         Me.Controls.Add(Me.keys_btn)
         Me.Cursor = System.Windows.Forms.Cursors.Default
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(700, 927)
         Me.Name = "MainInterface"
         Me.Text = "MainInterface"
         Me.ResumeLayout(False)
@@ -509,4 +527,5 @@ Partial Class MainInterface
     Friend WithEvents Label29 As Label
     Friend WithEvents Label30 As Label
     Friend WithEvents coin_in_btn As Button
+    Friend WithEvents saldo_lbl As Label
 End Class

@@ -96,6 +96,8 @@ Public Class Keypad
         btnOK.FlatAppearance.BorderSize = 0
         btnOK.FlatAppearance.MouseOverBackColor = Color.Transparent
         btnOK.FlatAppearance.MouseDownBackColor = Color.Transparent
+
+        error_lbl.Text = ""
     End Sub
 
     Private Sub btn1_Click(sender As Object, e As EventArgs) Handles btn1.Click
@@ -147,8 +149,14 @@ Public Class Keypad
     End Sub
 
     Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
-        Me.Close()
         numero = Val(keypad_screen_lbl.Text)
+        If (numero < 1) Or (numero > 13) Then
+            error_lbl.Text = "Item não" & vbNewLine & "encontrado!"
+            keypad_screen_lbl.Text = ""
+        Else
+            error_lbl.Text = ""
+            Me.Close()
+        End If
     End Sub
 
     Private Sub Keypad_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing

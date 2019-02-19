@@ -36,6 +36,7 @@ Partial Class Keypad
         Me.btn0 = New System.Windows.Forms.Button()
         Me.btnC = New System.Windows.Forms.Button()
         Me.btnOK = New System.Windows.Forms.Button()
+        Me.error_lbl = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'keypad_screen_lbl
@@ -44,13 +45,11 @@ Partial Class Keypad
         Me.keypad_screen_lbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.keypad_screen_lbl.Cursor = System.Windows.Forms.Cursors.No
         Me.keypad_screen_lbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.keypad_screen_lbl.ForeColor = System.Drawing.Color.Red
-        Me.keypad_screen_lbl.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.keypad_screen_lbl.Location = New System.Drawing.Point(80, 92)
+        Me.keypad_screen_lbl.ForeColor = System.Drawing.Color.Black
+        Me.keypad_screen_lbl.Location = New System.Drawing.Point(66, 92)
         Me.keypad_screen_lbl.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.keypad_screen_lbl.Name = "keypad_screen_lbl"
-        Me.keypad_screen_lbl.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.keypad_screen_lbl.Size = New System.Drawing.Size(186, 42)
+        Me.keypad_screen_lbl.Size = New System.Drawing.Size(211, 42)
         Me.keypad_screen_lbl.TabIndex = 0
         Me.keypad_screen_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -223,6 +222,21 @@ Partial Class Keypad
         Me.btnOK.TabIndex = 13
         Me.btnOK.UseVisualStyleBackColor = False
         '
+        'error_lbl
+        '
+        Me.error_lbl.BackColor = System.Drawing.Color.Transparent
+        Me.error_lbl.Cursor = System.Windows.Forms.Cursors.No
+        Me.error_lbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.error_lbl.ForeColor = System.Drawing.Color.Red
+        Me.error_lbl.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.error_lbl.Location = New System.Drawing.Point(66, 518)
+        Me.error_lbl.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.error_lbl.Name = "error_lbl"
+        Me.error_lbl.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.error_lbl.Size = New System.Drawing.Size(211, 72)
+        Me.error_lbl.TabIndex = 14
+        Me.error_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Keypad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -230,6 +244,7 @@ Partial Class Keypad
         Me.BackgroundImage = Global.Vending.My.Resources.Resources.only_pad
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(342, 633)
+        Me.Controls.Add(Me.error_lbl)
         Me.Controls.Add(Me.btnOK)
         Me.Controls.Add(Me.btnC)
         Me.Controls.Add(Me.btn0)
@@ -264,4 +279,5 @@ Partial Class Keypad
     Friend WithEvents btn0 As Button
     Friend WithEvents btnC As Button
     Friend WithEvents btnOK As Button
+    Friend WithEvents error_lbl As Label
 End Class
