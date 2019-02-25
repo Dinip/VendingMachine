@@ -1,11 +1,13 @@
 ﻿Imports System.ComponentModel
 
 Public Class Keypad
+    Dim contador As Integer
     Private Sub Keypad_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' WIP keypad_screen_lbl.Text = numero
 
         ' Label prop changing to default values
-        keypad_screen_lbl.Font = New Font("Microsoft Sans Serif", 18, FontStyle.Bold)
+        keypad_screen_lbl.Font = New Font("Microsoft Sans Serif", 32, FontStyle.Bold)
+        keypad_screen_lbl.TextAlign = ContentAlignment.MiddleCenter
 
         ' Button 1
         btn1.FlatStyle = FlatStyle.Flat
@@ -101,43 +103,58 @@ Public Class Keypad
 
         error_lbl.Text = ""
 
-        keypad_screen_lbl.Font = New Font("Microsoft Sans Serif", 32, FontStyle.Bold)
-        keypad_screen_lbl.TextAlign = ContentAlignment.MiddleCenter
+    End Sub
+
+    Sub clear()
+        If keypad_screen_lbl.Text = ("Item não" & vbNewLine & "encontrado!") Or keypad_screen_lbl.Text = ("Artigo: " & numero & vbNewLine & "Saldo insuficiente.") Then
+            keypad_screen_lbl.Text = ""
+            keypad_screen_lbl.Font = New Font("Microsoft Sans Serif", 32, FontStyle.Bold)
+            keypad_screen_lbl.TextAlign = ContentAlignment.MiddleCenter
+        End If
     End Sub
 
     Private Sub btn1_Click(sender As Object, e As EventArgs) Handles btn1.Click
+        clear()
         keypad_screen_lbl.Text = keypad_screen_lbl.Text + "1"
     End Sub
 
     Private Sub btn2_Click(sender As Object, e As EventArgs) Handles btn2.Click
+        clear()
         keypad_screen_lbl.Text = keypad_screen_lbl.Text + "2"
     End Sub
 
     Private Sub btn3_Click(sender As Object, e As EventArgs) Handles btn3.Click
+        clear()
         keypad_screen_lbl.Text = keypad_screen_lbl.Text + "3"
     End Sub
 
     Private Sub btn4_Click(sender As Object, e As EventArgs) Handles btn4.Click
+        clear()
         keypad_screen_lbl.Text = keypad_screen_lbl.Text + "4"
     End Sub
 
     Private Sub btn5_Click(sender As Object, e As EventArgs) Handles btn5.Click
+        clear()
         keypad_screen_lbl.Text = keypad_screen_lbl.Text + "5"
     End Sub
 
     Private Sub btn6_Click(sender As Object, e As EventArgs) Handles btn6.Click
+        clear()
         keypad_screen_lbl.Text = keypad_screen_lbl.Text + "6"
     End Sub
 
     Private Sub btn7_Click(sender As Object, e As EventArgs) Handles btn7.Click
+        clear()
         keypad_screen_lbl.Text = keypad_screen_lbl.Text + "7"
     End Sub
 
     Private Sub btn8_Click(sender As Object, e As EventArgs) Handles btn8.Click
+        clear()
         keypad_screen_lbl.Text = keypad_screen_lbl.Text + "8"
     End Sub
 
     Private Sub btn9_Click(sender As Object, e As EventArgs) Handles btn9.Click
+        clear()
         keypad_screen_lbl.Text = keypad_screen_lbl.Text + "9"
     End Sub
 
@@ -146,6 +163,7 @@ Public Class Keypad
     End Sub
 
     Private Sub btn0_Click(sender As Object, e As EventArgs) Handles btn0.Click
+        clear()
         keypad_screen_lbl.Text = keypad_screen_lbl.Text + "0"
     End Sub
 
@@ -163,15 +181,11 @@ Public Class Keypad
 
         ' Verifies if the number is inside the allowed range. If true displays the number and '
         ' the price. If price is higher the balance gives "error"'
-
         If (numero < 1) Or (numero > 13) Then
             keypad_screen_lbl.Text = "Item não" & vbNewLine & "encontrado!"
-            Threading.Thread.Sleep(500)
-            keypad_screen_lbl.Text = ""
         Else
             keypad_screen_lbl.Text = numero & vbNewLine & "Preço: " & items(numero) & " €"
             If items(numero) > saldo Then
-
                 keypad_screen_lbl.Text = "Artigo: " & numero & vbNewLine & "Saldo insuficiente."
             End If
             ' Me.Close()
