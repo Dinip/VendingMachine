@@ -78,6 +78,12 @@
     <Compile Include="Coins_Insert.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Coins_Remove.Designer.vb">
+      <DependentUpon>Coins_Remove.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Coins_Remove.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Keypad.Designer.vb">
       <DependentUpon>Keypad.vb</DependentUpon>
     </Compile>
@@ -105,10 +111,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="PublicVars.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Coins_Insert.resx">
       <DependentUpon>Coins_Insert.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coins_Remove.resx">
+      <DependentUpon>Coins_Remove.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Keypad.resx">
       <DependentUpon>Keypad.vb</DependentUpon>
@@ -143,6 +153,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\coin_insert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coins_out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\50c.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

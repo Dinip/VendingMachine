@@ -41,7 +41,7 @@ Partial Class Coins_Insert
         Me.btn1c.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn1c.FlatAppearance.BorderSize = 0
         Me.btn1c.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn1c.Location = New System.Drawing.Point(96, 226)
+        Me.btn1c.Location = New System.Drawing.Point(94, 227)
         Me.btn1c.Name = "btn1c"
         Me.btn1c.Size = New System.Drawing.Size(55, 45)
         Me.btn1c.TabIndex = 2
@@ -54,9 +54,9 @@ Partial Class Coins_Insert
         Me.btn2c.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn2c.FlatAppearance.BorderSize = 0
         Me.btn2c.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn2c.Location = New System.Drawing.Point(181, 220)
+        Me.btn2c.Location = New System.Drawing.Point(181, 226)
         Me.btn2c.Name = "btn2c"
-        Me.btn2c.Size = New System.Drawing.Size(60, 51)
+        Me.btn2c.Size = New System.Drawing.Size(56, 46)
         Me.btn2c.TabIndex = 3
         Me.btn2c.UseVisualStyleBackColor = False
         '
@@ -67,9 +67,9 @@ Partial Class Coins_Insert
         Me.btn10c.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn10c.FlatAppearance.BorderSize = 0
         Me.btn10c.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn10c.Location = New System.Drawing.Point(92, 290)
+        Me.btn10c.Location = New System.Drawing.Point(89, 289)
         Me.btn10c.Name = "btn10c"
-        Me.btn10c.Size = New System.Drawing.Size(65, 56)
+        Me.btn10c.Size = New System.Drawing.Size(66, 53)
         Me.btn10c.TabIndex = 4
         Me.btn10c.UseVisualStyleBackColor = False
         '
@@ -80,7 +80,7 @@ Partial Class Coins_Insert
         Me.btn20c.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn20c.FlatAppearance.BorderSize = 0
         Me.btn20c.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn20c.Location = New System.Drawing.Point(177, 290)
+        Me.btn20c.Location = New System.Drawing.Point(176, 285)
         Me.btn20c.Name = "btn20c"
         Me.btn20c.Size = New System.Drawing.Size(67, 55)
         Me.btn20c.TabIndex = 5
@@ -93,7 +93,7 @@ Partial Class Coins_Insert
         Me.btn5c.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn5c.FlatAppearance.BorderSize = 0
         Me.btn5c.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn5c.Location = New System.Drawing.Point(263, 216)
+        Me.btn5c.Location = New System.Drawing.Point(266, 216)
         Me.btn5c.Name = "btn5c"
         Me.btn5c.Size = New System.Drawing.Size(67, 55)
         Me.btn5c.TabIndex = 6
@@ -106,9 +106,9 @@ Partial Class Coins_Insert
         Me.btn50c.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn50c.FlatAppearance.BorderSize = 0
         Me.btn50c.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn50c.Location = New System.Drawing.Point(263, 290)
+        Me.btn50c.Location = New System.Drawing.Point(264, 283)
         Me.btn50c.Name = "btn50c"
-        Me.btn50c.Size = New System.Drawing.Size(67, 55)
+        Me.btn50c.Size = New System.Drawing.Size(73, 61)
         Me.btn50c.TabIndex = 7
         Me.btn50c.UseVisualStyleBackColor = False
         '
@@ -119,9 +119,9 @@ Partial Class Coins_Insert
         Me.btn1e.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn1e.FlatAppearance.BorderSize = 0
         Me.btn1e.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn1e.Location = New System.Drawing.Point(130, 361)
+        Me.btn1e.Location = New System.Drawing.Point(124, 361)
         Me.btn1e.Name = "btn1e"
-        Me.btn1e.Size = New System.Drawing.Size(67, 55)
+        Me.btn1e.Size = New System.Drawing.Size(71, 54)
         Me.btn1e.TabIndex = 8
         Me.btn1e.UseVisualStyleBackColor = False
         '
@@ -132,9 +132,9 @@ Partial Class Coins_Insert
         Me.btn2e.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn2e.FlatAppearance.BorderSize = 0
         Me.btn2e.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn2e.Location = New System.Drawing.Point(219, 361)
+        Me.btn2e.Location = New System.Drawing.Point(225, 360)
         Me.btn2e.Name = "btn2e"
-        Me.btn2e.Size = New System.Drawing.Size(65, 55)
+        Me.btn2e.Size = New System.Drawing.Size(69, 55)
         Me.btn2e.TabIndex = 9
         Me.btn2e.UseVisualStyleBackColor = False
         '
@@ -159,7 +159,7 @@ Partial Class Coins_Insert
         Me.btn_clear_saldo.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_clear_saldo.FlatAppearance.BorderSize = 0
         Me.btn_clear_saldo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_clear_saldo.Location = New System.Drawing.Point(102, 455)
+        Me.btn_clear_saldo.Location = New System.Drawing.Point(102, 454)
         Me.btn_clear_saldo.Name = "btn_clear_saldo"
         Me.btn_clear_saldo.Size = New System.Drawing.Size(65, 55)
         Me.btn_clear_saldo.TabIndex = 11
@@ -183,6 +183,9 @@ Partial Class Coins_Insert
         Me.Controls.Add(Me.btn2c)
         Me.Controls.Add(Me.btn1c)
         Me.DoubleBuffered = True
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(426, 698)
+        Me.MinimumSize = New System.Drawing.Size(426, 698)
         Me.Name = "Coins_Insert"
         Me.Text = "Coins_Insert"
         Me.ResumeLayout(False)

@@ -1,9 +1,11 @@
 ﻿Imports System.ComponentModel
 
 Public Class Keypad
-    Public Property numero As Integer
     Private Sub Keypad_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' WIP keypad_screen_lbl.Text = numero
+
+        ' Label prop changing to default values
+        keypad_screen_lbl.Font = New Font("Microsoft Sans Serif", 18, FontStyle.Bold)
 
         ' Button 1
         btn1.FlatStyle = FlatStyle.Flat
@@ -98,6 +100,9 @@ Public Class Keypad
         btnOK.FlatAppearance.MouseDownBackColor = Color.Transparent
 
         error_lbl.Text = ""
+
+        keypad_screen_lbl.Font = New Font("Microsoft Sans Serif", 32, FontStyle.Bold)
+        keypad_screen_lbl.TextAlign = ContentAlignment.MiddleCenter
     End Sub
 
     Private Sub btn1_Click(sender As Object, e As EventArgs) Handles btn1.Click
@@ -149,13 +154,27 @@ Public Class Keypad
     End Sub
 
     Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
+        ' Sets var numero equals to label val
         numero = Val(keypad_screen_lbl.Text)
+
+        'Text font and alignment ajusts 
+        keypad_screen_lbl.Font = New Font("Microsoft Sans Serif", 18, FontStyle.Bold)
+        keypad_screen_lbl.TextAlign = ContentAlignment.TopLeft
+
+        ' Verifies if the number is inside the allowed range. If true displays the number and '
+        ' the price. If price is higher the balance gives "error"'
+
         If (numero < 1) Or (numero > 13) Then
-            error_lbl.Text = "Item não" & vbNewLine & "encontrado!"
+            keypad_screen_lbl.Text = "Item não" & vbNewLine & "encontrado!"
+            Threading.Thread.Sleep(500)
             keypad_screen_lbl.Text = ""
         Else
-            error_lbl.Text = ""
-            Me.Close()
+            keypad_screen_lbl.Text = numero & vbNewLine & "Preço: " & items(numero) & " €"
+            If items(numero) > saldo Then
+
+                keypad_screen_lbl.Text = "Artigo: " & numero & vbNewLine & "Saldo insuficiente."
+            End If
+            ' Me.Close()
         End If
     End Sub
 

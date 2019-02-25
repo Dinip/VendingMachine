@@ -1,7 +1,6 @@
 ﻿Imports System.ComponentModel
 
 Public Class Coins_Insert
-    Dim saldo As Single
     Private Sub Coins_Insert_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Button 1c
         btn1c.FlatStyle = FlatStyle.Flat
@@ -65,6 +64,8 @@ Public Class Coins_Insert
         btn_clear_saldo.FlatAppearance.BorderSize = 0
         btn_clear_saldo.FlatAppearance.MouseOverBackColor = Color.Transparent
         btn_clear_saldo.FlatAppearance.MouseDownBackColor = Color.Transparent
+
+        saldo_lbl.Text = vbNewLine & "Saldo: " & saldo & "€"
     End Sub
 
     Private Sub btn1c_Click(sender As Object, e As EventArgs) Handles btn1c.Click

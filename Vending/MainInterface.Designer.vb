@@ -56,6 +56,7 @@ Partial Class MainInterface
         Me.Label30 = New System.Windows.Forms.Label()
         Me.coin_in_btn = New System.Windows.Forms.Button()
         Me.saldo_lbl = New System.Windows.Forms.Label()
+        Me.coin_out_btn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'keys_btn
@@ -443,6 +444,19 @@ Partial Class MainInterface
         Me.saldo_lbl.TabIndex = 37
         Me.saldo_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'coin_out_btn
+        '
+        Me.coin_out_btn.BackColor = System.Drawing.Color.Transparent
+        Me.coin_out_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.coin_out_btn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.coin_out_btn.FlatAppearance.BorderSize = 0
+        Me.coin_out_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.coin_out_btn.Location = New System.Drawing.Point(586, 467)
+        Me.coin_out_btn.Name = "coin_out_btn"
+        Me.coin_out_btn.Size = New System.Drawing.Size(72, 121)
+        Me.coin_out_btn.TabIndex = 38
+        Me.coin_out_btn.UseVisualStyleBackColor = False
+        '
         'MainInterface
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -450,6 +464,7 @@ Partial Class MainInterface
         Me.BackgroundImage = Global.Vending.My.Resources.Resources.vending_ps_render_low_res
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(684, 888)
+        Me.Controls.Add(Me.coin_out_btn)
         Me.Controls.Add(Me.saldo_lbl)
         Me.Controls.Add(Me.coin_in_btn)
         Me.Controls.Add(Me.Label30)
@@ -487,6 +502,7 @@ Partial Class MainInterface
         Me.Cursor = System.Windows.Forms.Cursors.Default
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(700, 927)
+        Me.MinimumSize = New System.Drawing.Size(700, 927)
         Me.Name = "MainInterface"
         Me.Text = "MainInterface"
         Me.ResumeLayout(False)
@@ -528,4 +544,5 @@ Partial Class MainInterface
     Friend WithEvents Label30 As Label
     Friend WithEvents coin_in_btn As Button
     Friend WithEvents saldo_lbl As Label
+    Friend WithEvents coin_out_btn As Button
 End Class

@@ -44,14 +44,13 @@ Partial Class Keypad
         Me.keypad_screen_lbl.BackColor = System.Drawing.Color.Transparent
         Me.keypad_screen_lbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.keypad_screen_lbl.Cursor = System.Windows.Forms.Cursors.No
-        Me.keypad_screen_lbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.keypad_screen_lbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.keypad_screen_lbl.ForeColor = System.Drawing.Color.Black
-        Me.keypad_screen_lbl.Location = New System.Drawing.Point(66, 92)
+        Me.keypad_screen_lbl.Location = New System.Drawing.Point(67, 64)
         Me.keypad_screen_lbl.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.keypad_screen_lbl.Name = "keypad_screen_lbl"
-        Me.keypad_screen_lbl.Size = New System.Drawing.Size(211, 42)
+        Me.keypad_screen_lbl.Size = New System.Drawing.Size(211, 92)
         Me.keypad_screen_lbl.TabIndex = 0
-        Me.keypad_screen_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btn1
         '
@@ -259,6 +258,9 @@ Partial Class Keypad
         Me.Controls.Add(Me.btn2)
         Me.Controls.Add(Me.btn1)
         Me.Controls.Add(Me.keypad_screen_lbl)
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(358, 672)
+        Me.MinimumSize = New System.Drawing.Size(358, 672)
         Me.Name = "Keypad"
         Me.Text = "Keypad"
         Me.ResumeLayout(False)
