@@ -146,7 +146,7 @@ Partial Class Coins_Insert
         Me.saldo_lbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.saldo_lbl.ForeColor = System.Drawing.SystemColors.WindowText
         Me.saldo_lbl.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.saldo_lbl.Location = New System.Drawing.Point(111, 104)
+        Me.saldo_lbl.Location = New System.Drawing.Point(114, 109)
         Me.saldo_lbl.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.saldo_lbl.Name = "saldo_lbl"
         Me.saldo_lbl.Size = New System.Drawing.Size(194, 67)

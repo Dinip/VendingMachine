@@ -2,6 +2,7 @@
 
 Public Class Keypad
     Dim contador As Integer
+    Dim i As Integer = 1
     Private Sub Keypad_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' WIP keypad_screen_lbl.Text = numero
 
@@ -168,10 +169,12 @@ Public Class Keypad
     End Sub
 
     Private Sub btnC_Click(sender As Object, e As EventArgs) Handles btnC.Click
+        clear()
         keypad_screen_lbl.Text = ""
     End Sub
 
     Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
+        clear()
         ' Sets var numero equals to label val
         numero = Val(keypad_screen_lbl.Text)
 
@@ -184,15 +187,36 @@ Public Class Keypad
         If (numero < 1) Or (numero > 13) Then
             keypad_screen_lbl.Text = "Item não" & vbNewLine & "encontrado!"
         Else
-            keypad_screen_lbl.Text = numero & vbNewLine & "Preço: " & items(numero) & " €"
+            keypad_screen_lbl.Text = "Preço: " & items(numero) & " €"
             If items(numero) > saldo Then
                 keypad_screen_lbl.Text = "Artigo: " & numero & vbNewLine & "Saldo insuficiente."
+            Else
+                If stock(numero) < 1 Then
+                    keypad_screen_lbl.Text = "Stock insuficiente."
+                Else
+                    keypad_screen_lbl.Text = keypad_screen_lbl.Text & vbNewLine & "Compra sucedida!"
+                    stock(numero) -= 1
+
+
+                    For i = 1 To 100000000
+                        i += 0.5
+                    Next
+
+                    Me.Close()
+                End If
+
             End If
             ' Me.Close()
         End If
     End Sub
 
     Private Sub Keypad_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        MainInterface.Controls("keypad_screen_lbl").Text = keypad_screen_lbl.Text
+        If (keypad_screen_lbl.Text = ("Artigo: " & numero & vbNewLine & "Saldo insuficiente.")) Then
+            MainInterface.Controls("keypad_screen_lbl").Text = numero
+        ElseIf (keypad_screen_lbl.Text = ("Item não" & vbNewLine & "encontrado!")) Then
+            MainInterface.Controls("keypad_screen_lbl").Text = ""
+        Else
+            MainInterface.Controls("keypad_screen_lbl").Text = ""
+        End If
     End Sub
 End Class

@@ -22,6 +22,16 @@
         coin_out_btn.FlatAppearance.MouseOverBackColor = Color.Transparent
         coin_out_btn.FlatAppearance.MouseDownBackColor = Color.Transparent
 
+        ' stock_btn
+        stocks_btn.FlatStyle = FlatStyle.Flat
+        stocks_btn.BackColor = Color.Transparent
+        stocks_btn.FlatAppearance.BorderSize = 0
+        stocks_btn.FlatAppearance.MouseOverBackColor = Color.Transparent
+        stocks_btn.FlatAppearance.MouseDownBackColor = Color.Transparent
+
+        ' Sets default saldo (0€)
+        saldo_lbl.Text = "0€"
+
         ' Sets prices
         items(1) = 1.2
         items(2) = 1.35
@@ -37,6 +47,20 @@
         items(12) = 1.05
         items(13) = 1.45
 
+        ' Stock manager
+        stock(1) = CInt(Int((15 * Rnd()) + 1))
+        stock(2) = CInt(Int((15 * Rnd()) + 1))
+        stock(3) = CInt(Int((15 * Rnd()) + 1))
+        stock(4) = CInt(Int((15 * Rnd()) + 1))
+        stock(5) = CInt(Int((15 * Rnd()) + 1))
+        stock(6) = CInt(Int((15 * Rnd()) + 1))
+        stock(7) = CInt(Int((15 * Rnd()) + 1))
+        stock(8) = CInt(Int((15 * Rnd()) + 1))
+        stock(9) = CInt(Int((15 * Rnd()) + 1))
+        stock(10) = CInt(Int((15 * Rnd()) + 1))
+        stock(11) = CInt(Int((15 * Rnd()) + 1))
+        stock(12) = CInt(Int((15 * Rnd()) + 1))
+        stock(13) = CInt(Int((15 * Rnd()) + 1))
     End Sub
 
     Private Sub keys_btn_Click(sender As Object, e As EventArgs) Handles keys_btn.Click
@@ -53,6 +77,10 @@
 
     Private Sub coin_out_btn_Click(sender As Object, e As EventArgs) Handles coin_out_btn.Click
         Coins_Remove.Show()
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles stocks_btn.Click
+        MsgBox("1 => " & stock(1) & vbNewLine & "2 => " & stock(2) & vbNewLine & "3 => " & stock(3) & vbNewLine & "4 => " & stock(4) & vbNewLine & "5 => " & stock(5) & vbNewLine & "6 => " & stock(6) & vbNewLine & "7 => " & stock(7) & vbNewLine & "8 => " & stock(8) & vbNewLine & "9 => " & stock(9) & vbNewLine & "10 => " & stock(10) & vbNewLine & "11 => " & stock(11) & vbNewLine & "12 => " & stock(12) & vbNewLine & "13 => " & stock(13))
     End Sub
 End Class
 

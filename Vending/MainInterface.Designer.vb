@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MainInterface
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class MainInterface
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.keys_btn = New System.Windows.Forms.Button()
         Me.keypad_screen_lbl = New System.Windows.Forms.Label()
@@ -57,6 +57,8 @@ Partial Class MainInterface
         Me.coin_in_btn = New System.Windows.Forms.Button()
         Me.saldo_lbl = New System.Windows.Forms.Label()
         Me.coin_out_btn = New System.Windows.Forms.Button()
+        Me.stocks_btn = New System.Windows.Forms.Button()
+        Me.troco_lbl = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'keys_btn
@@ -457,6 +459,32 @@ Partial Class MainInterface
         Me.coin_out_btn.TabIndex = 38
         Me.coin_out_btn.UseVisualStyleBackColor = False
         '
+        'stocks_btn
+        '
+        Me.stocks_btn.BackColor = System.Drawing.Color.Transparent
+        Me.stocks_btn.Cursor = System.Windows.Forms.Cursors.No
+        Me.stocks_btn.FlatAppearance.BorderSize = 0
+        Me.stocks_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.stocks_btn.Location = New System.Drawing.Point(585, 840)
+        Me.stocks_btn.Name = "stocks_btn"
+        Me.stocks_btn.Size = New System.Drawing.Size(75, 23)
+        Me.stocks_btn.TabIndex = 39
+        Me.stocks_btn.UseVisualStyleBackColor = False
+        '
+        'troco_lbl
+        '
+        Me.troco_lbl.BackColor = System.Drawing.Color.Transparent
+        Me.troco_lbl.Cursor = System.Windows.Forms.Cursors.No
+        Me.troco_lbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.troco_lbl.ForeColor = System.Drawing.Color.Black
+        Me.troco_lbl.Location = New System.Drawing.Point(593, 487)
+        Me.troco_lbl.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.troco_lbl.Name = "troco_lbl"
+        Me.troco_lbl.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.troco_lbl.Size = New System.Drawing.Size(57, 23)
+        Me.troco_lbl.TabIndex = 40
+        Me.troco_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'MainInterface
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -464,6 +492,8 @@ Partial Class MainInterface
         Me.BackgroundImage = Global.Vending.My.Resources.Resources.vending_ps_render_low_res
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(684, 888)
+        Me.Controls.Add(Me.troco_lbl)
+        Me.Controls.Add(Me.stocks_btn)
         Me.Controls.Add(Me.coin_out_btn)
         Me.Controls.Add(Me.saldo_lbl)
         Me.Controls.Add(Me.coin_in_btn)
@@ -504,7 +534,7 @@ Partial Class MainInterface
         Me.MaximumSize = New System.Drawing.Size(700, 927)
         Me.MinimumSize = New System.Drawing.Size(700, 927)
         Me.Name = "MainInterface"
-        Me.Text = "MainInterface"
+        Me.Text = "Vending Machine"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -545,4 +575,6 @@ Partial Class MainInterface
     Friend WithEvents coin_in_btn As Button
     Friend WithEvents saldo_lbl As Label
     Friend WithEvents coin_out_btn As Button
+    Friend WithEvents stocks_btn As Button
+    Friend WithEvents troco_lbl As Label
 End Class
