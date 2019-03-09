@@ -114,49 +114,62 @@ Public Class Keypad
         End If
     End Sub
 
+    Sub updatelbl()
+        MainInterface.Controls("keypad_screen_lbl").Text = keypad_screen_lbl.Text
+    End Sub
+
     Private Sub btn1_Click(sender As Object, e As EventArgs) Handles btn1.Click
         clear()
         keypad_screen_lbl.Text = keypad_screen_lbl.Text + "1"
+        updatelbl()
     End Sub
 
     Private Sub btn2_Click(sender As Object, e As EventArgs) Handles btn2.Click
         clear()
         keypad_screen_lbl.Text = keypad_screen_lbl.Text + "2"
+        updatelbl()
     End Sub
 
     Private Sub btn3_Click(sender As Object, e As EventArgs) Handles btn3.Click
         clear()
         keypad_screen_lbl.Text = keypad_screen_lbl.Text + "3"
+        updatelbl()
     End Sub
 
     Private Sub btn4_Click(sender As Object, e As EventArgs) Handles btn4.Click
         clear()
         keypad_screen_lbl.Text = keypad_screen_lbl.Text + "4"
+        updatelbl()
     End Sub
 
     Private Sub btn5_Click(sender As Object, e As EventArgs) Handles btn5.Click
         clear()
         keypad_screen_lbl.Text = keypad_screen_lbl.Text + "5"
+        updatelbl()
     End Sub
 
     Private Sub btn6_Click(sender As Object, e As EventArgs) Handles btn6.Click
         clear()
         keypad_screen_lbl.Text = keypad_screen_lbl.Text + "6"
+        updatelbl()
     End Sub
 
     Private Sub btn7_Click(sender As Object, e As EventArgs) Handles btn7.Click
         clear()
         keypad_screen_lbl.Text = keypad_screen_lbl.Text + "7"
+        updatelbl()
     End Sub
 
     Private Sub btn8_Click(sender As Object, e As EventArgs) Handles btn8.Click
         clear()
         keypad_screen_lbl.Text = keypad_screen_lbl.Text + "8"
+        updatelbl()
     End Sub
 
     Private Sub btn9_Click(sender As Object, e As EventArgs) Handles btn9.Click
         clear()
         keypad_screen_lbl.Text = keypad_screen_lbl.Text + "9"
+        updatelbl()
     End Sub
 
     Private Sub btnX_Click(sender As Object, e As EventArgs) Handles btnX.Click
@@ -166,11 +179,13 @@ Public Class Keypad
     Private Sub btn0_Click(sender As Object, e As EventArgs) Handles btn0.Click
         clear()
         keypad_screen_lbl.Text = keypad_screen_lbl.Text + "0"
+        updatelbl()
     End Sub
 
     Private Sub btnC_Click(sender As Object, e As EventArgs) Handles btnC.Click
         clear()
         keypad_screen_lbl.Text = ""
+        updatelbl()
     End Sub
 
     Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
@@ -186,9 +201,10 @@ Public Class Keypad
         ' the price. If price is higher the balance gives "error"'
         If (numero < 1) Or (numero > 13) Then
             keypad_screen_lbl.Text = "Item não" & vbNewLine & "encontrado!"
+            MainInterface.Controls("keypad_screen_lbl").Text = ""
         Else
-            keypad_screen_lbl.Text = "Preço: " & items(numero) & " €"
-            If items(numero) > saldo Then
+            keypad_screen_lbl.Text = "Preço: " & price(numero) & " €"
+            If price(numero) > saldo Then
                 keypad_screen_lbl.Text = "Artigo: " & numero & vbNewLine & "Saldo insuficiente."
             Else
                 If stock(numero) < 1 Then
@@ -196,13 +212,11 @@ Public Class Keypad
                 Else
                     keypad_screen_lbl.Text = keypad_screen_lbl.Text & vbNewLine & "Compra sucedida!"
                     stock(numero) -= 1
-
-
-                    For i = 1 To 100000000
-                        i += 0.5
-                    Next
-
-                    Me.Close()
+                    saldo -= price(numero)
+                    My.Computer.Audio.Play(My.Resources.mario, AudioPlayMode.WaitToComplete)
+                    MainInterface.Controls("saldo_lbl").Text = saldo & "€"
+                    'Problems with text before closing
+                    'Me.Close()
                 End If
 
             End If

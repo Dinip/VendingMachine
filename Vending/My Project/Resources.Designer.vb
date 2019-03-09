@@ -61,82 +61,11 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
-        Friend ReadOnly Property _10c() As System.Drawing.Bitmap
+        Friend ReadOnly Property coin_drop() As System.IO.UnmanagedMemoryStream
             Get
-                Dim obj As Object = ResourceManager.GetObject("10c", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property _1c() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("1c", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property _1e() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("1e", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property _20c() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("20c", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property _2c() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("2c", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property _2e() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("2e", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property _50c() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("50c", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property _5c() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("5c", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
+                Return ResourceManager.GetStream("coin_drop", resourceCulture)
             End Get
         End Property
         
@@ -157,6 +86,15 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("coins_out", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property mario() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("mario", resourceCulture)
             End Get
         End Property
         

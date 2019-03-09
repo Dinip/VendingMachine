@@ -121,9 +121,6 @@
   <data name="vending_ps_render_low_res" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vending_ps_render_low_res.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1c" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="coin_insert" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coin_insert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,25 +130,10 @@
   <data name="coins_out" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coins_out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1e" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1e.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mario.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="2c" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="5c" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\5c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2e" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2e.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="10c" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\10c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="20c" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\20c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="50c" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\50c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="coin_drop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coin_drop.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

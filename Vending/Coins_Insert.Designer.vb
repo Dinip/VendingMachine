@@ -32,6 +32,7 @@ Partial Class Coins_Insert
         Me.btn2e = New System.Windows.Forms.Button()
         Me.saldo_lbl = New System.Windows.Forms.Label()
         Me.btn_clear_saldo = New System.Windows.Forms.Button()
+        Me.exit_btn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btn1c
@@ -80,7 +81,7 @@ Partial Class Coins_Insert
         Me.btn20c.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn20c.FlatAppearance.BorderSize = 0
         Me.btn20c.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn20c.Location = New System.Drawing.Point(176, 285)
+        Me.btn20c.Location = New System.Drawing.Point(176, 286)
         Me.btn20c.Name = "btn20c"
         Me.btn20c.Size = New System.Drawing.Size(67, 55)
         Me.btn20c.TabIndex = 5
@@ -165,6 +166,20 @@ Partial Class Coins_Insert
         Me.btn_clear_saldo.TabIndex = 11
         Me.btn_clear_saldo.UseVisualStyleBackColor = False
         '
+        'exit_btn
+        '
+        Me.exit_btn.BackColor = System.Drawing.Color.Transparent
+        Me.exit_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.exit_btn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.exit_btn.FlatAppearance.BorderSize = 0
+        Me.exit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.exit_btn.Location = New System.Drawing.Point(207, 455)
+        Me.exit_btn.Name = "exit_btn"
+        Me.exit_btn.Size = New System.Drawing.Size(102, 82)
+        Me.exit_btn.TabIndex = 12
+        Me.exit_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.exit_btn.UseVisualStyleBackColor = False
+        '
         'Coins_Insert
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -172,6 +187,7 @@ Partial Class Coins_Insert
         Me.BackgroundImage = Global.Vending.My.Resources.Resources.coin_insert
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(410, 659)
+        Me.Controls.Add(Me.exit_btn)
         Me.Controls.Add(Me.btn_clear_saldo)
         Me.Controls.Add(Me.saldo_lbl)
         Me.Controls.Add(Me.btn2e)
@@ -202,4 +218,5 @@ Partial Class Coins_Insert
     Friend WithEvents btn2e As Button
     Friend WithEvents saldo_lbl As Label
     Friend WithEvents btn_clear_saldo As Button
+    Friend WithEvents exit_btn As Button
 End Class

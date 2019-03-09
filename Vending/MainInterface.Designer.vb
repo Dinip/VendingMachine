@@ -577,4 +577,5 @@ Partial Class MainInterface
     Friend WithEvents coin_out_btn As Button
     Friend WithEvents stocks_btn As Button
     Friend WithEvents troco_lbl As Label
+    Friend WithEvents Timer1 As Timer
 End Class
