@@ -57,8 +57,8 @@ Partial Class MainInterface
         Me.coin_in_btn = New System.Windows.Forms.Button()
         Me.saldo_lbl = New System.Windows.Forms.Label()
         Me.coin_out_btn = New System.Windows.Forms.Button()
-        Me.stocks_btn = New System.Windows.Forms.Button()
-        Me.troco_lbl = New System.Windows.Forms.Label()
+        Me.admin_btn = New System.Windows.Forms.Button()
+        Me.info = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'keys_btn
@@ -459,31 +459,30 @@ Partial Class MainInterface
         Me.coin_out_btn.TabIndex = 38
         Me.coin_out_btn.UseVisualStyleBackColor = False
         '
-        'stocks_btn
+        'admin_btn
         '
-        Me.stocks_btn.BackColor = System.Drawing.Color.Transparent
-        Me.stocks_btn.Cursor = System.Windows.Forms.Cursors.No
-        Me.stocks_btn.FlatAppearance.BorderSize = 0
-        Me.stocks_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.stocks_btn.Location = New System.Drawing.Point(585, 840)
-        Me.stocks_btn.Name = "stocks_btn"
-        Me.stocks_btn.Size = New System.Drawing.Size(75, 23)
-        Me.stocks_btn.TabIndex = 39
-        Me.stocks_btn.UseVisualStyleBackColor = False
+        Me.admin_btn.BackColor = System.Drawing.Color.Transparent
+        Me.admin_btn.Cursor = System.Windows.Forms.Cursors.No
+        Me.admin_btn.FlatAppearance.BorderSize = 0
+        Me.admin_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.admin_btn.Location = New System.Drawing.Point(585, 840)
+        Me.admin_btn.Name = "admin_btn"
+        Me.admin_btn.Size = New System.Drawing.Size(75, 23)
+        Me.admin_btn.TabIndex = 39
+        Me.admin_btn.UseVisualStyleBackColor = False
         '
-        'troco_lbl
+        'info
         '
-        Me.troco_lbl.BackColor = System.Drawing.Color.Transparent
-        Me.troco_lbl.Cursor = System.Windows.Forms.Cursors.No
-        Me.troco_lbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.troco_lbl.ForeColor = System.Drawing.Color.Black
-        Me.troco_lbl.Location = New System.Drawing.Point(593, 487)
-        Me.troco_lbl.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.troco_lbl.Name = "troco_lbl"
-        Me.troco_lbl.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.troco_lbl.Size = New System.Drawing.Size(57, 23)
-        Me.troco_lbl.TabIndex = 40
-        Me.troco_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.info.BackColor = System.Drawing.Color.Transparent
+        Me.info.Cursor = System.Windows.Forms.Cursors.No
+        Me.info.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.info.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.info.ForeColor = System.Drawing.SystemColors.Control
+        Me.info.Location = New System.Drawing.Point(2, 835)
+        Me.info.Name = "info"
+        Me.info.Size = New System.Drawing.Size(148, 51)
+        Me.info.TabIndex = 41
+        Me.info.Text = "Trabalho realizado por:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Dinis Pimpão 12ºA" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ESSG - Aplicações Inf."
         '
         'MainInterface
         '
@@ -492,8 +491,8 @@ Partial Class MainInterface
         Me.BackgroundImage = Global.Vending.My.Resources.Resources.vending_ps_render_low_res
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(684, 888)
-        Me.Controls.Add(Me.troco_lbl)
-        Me.Controls.Add(Me.stocks_btn)
+        Me.Controls.Add(Me.info)
+        Me.Controls.Add(Me.admin_btn)
         Me.Controls.Add(Me.coin_out_btn)
         Me.Controls.Add(Me.saldo_lbl)
         Me.Controls.Add(Me.coin_in_btn)
@@ -575,7 +574,7 @@ Partial Class MainInterface
     Friend WithEvents coin_in_btn As Button
     Friend WithEvents saldo_lbl As Label
     Friend WithEvents coin_out_btn As Button
-    Friend WithEvents stocks_btn As Button
-    Friend WithEvents troco_lbl As Label
+    Friend WithEvents admin_btn As Button
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents info As Label
 End Class

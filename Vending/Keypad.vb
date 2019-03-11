@@ -1,11 +1,11 @@
 ﻿Imports System.ComponentModel
 
 Public Class Keypad
-    Dim contador As Integer
-    Dim i As Integer = 1
+    Dim instock As Boolean = True
+    Dim hasmoney As Boolean = True
+
     Private Sub Keypad_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' WIP keypad_screen_lbl.Text = numero
-
         ' Label prop changing to default values
         keypad_screen_lbl.Font = New Font("Microsoft Sans Serif", 32, FontStyle.Bold)
         keypad_screen_lbl.TextAlign = ContentAlignment.MiddleCenter
@@ -102,15 +102,16 @@ Public Class Keypad
         btnOK.FlatAppearance.MouseOverBackColor = Color.Transparent
         btnOK.FlatAppearance.MouseDownBackColor = Color.Transparent
 
-        error_lbl.Text = ""
-
     End Sub
 
     Sub clear()
-        If keypad_screen_lbl.Text = ("Item não" & vbNewLine & "encontrado!") Or keypad_screen_lbl.Text = ("Artigo: " & numero & vbNewLine & "Saldo insuficiente.") Then
+        If keypad_screen_lbl.Text = ("Item não" & vbNewLine & "encontrado!") Or (instock = False) Or (hasmoney = False) Then
             keypad_screen_lbl.Text = ""
+            Me.Refresh()
             keypad_screen_lbl.Font = New Font("Microsoft Sans Serif", 32, FontStyle.Bold)
             keypad_screen_lbl.TextAlign = ContentAlignment.MiddleCenter
+            instock = True
+            hasmoney = True
         End If
     End Sub
 
@@ -189,38 +190,47 @@ Public Class Keypad
     End Sub
 
     Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
+        Dim counter As Integer = 10000
         clear()
         ' Sets var numero equals to label val
         numero = Val(keypad_screen_lbl.Text)
 
         'Text font and alignment ajusts 
-        keypad_screen_lbl.Font = New Font("Microsoft Sans Serif", 18, FontStyle.Bold)
+        keypad_screen_lbl.Font = New Font("Microsoft Sans Serif", 16, FontStyle.Bold)
         keypad_screen_lbl.TextAlign = ContentAlignment.TopLeft
 
-        ' Verifies if the number is inside the allowed range. If true displays the number and '
-        ' the price. If price is higher the balance gives "error"'
+        ' Verifies if the number isn't outside of the allowed range.
         If (numero < 1) Or (numero > 13) Then
             keypad_screen_lbl.Text = "Item não" & vbNewLine & "encontrado!"
             MainInterface.Controls("keypad_screen_lbl").Text = ""
         Else
             keypad_screen_lbl.Text = "Preço: " & price(numero) & " €"
+            ' Verifies if the price isn't higher than the balance
             If price(numero) > saldo Then
-                keypad_screen_lbl.Text = "Artigo: " & numero & vbNewLine & "Saldo insuficiente."
+                keypad_screen_lbl.Text = "Artigo: " & numero & vbNewLine & "Saldo insuficiente" & vbNewLine & "Insira " & price(numero) & "€"
+                hasmoney = False
             Else
+                ' Verifies if the stock ins't lower than 1
                 If stock(numero) < 1 Then
                     keypad_screen_lbl.Text = "Stock insuficiente."
+                    instock = False
                 Else
                     keypad_screen_lbl.Text = keypad_screen_lbl.Text & vbNewLine & "Compra sucedida!"
+                    Me.Refresh()
                     stock(numero) -= 1
                     saldo -= price(numero)
                     My.Computer.Audio.Play(My.Resources.mario, AudioPlayMode.WaitToComplete)
-                    MainInterface.Controls("saldo_lbl").Text = saldo & "€"
-                    'Problems with text before closing
-                    'Me.Close()
+                    MainInterface.Controls("saldo_lbl").Text = FormatNumber(saldo, 2) & "€"
+
+                    ' Counter just to delay form closing after buy complete
+                    While counter > 0
+                        counter -= 1
+                    End While
+
+                    Me.Close()
                 End If
 
             End If
-            ' Me.Close()
         End If
     End Sub
 
