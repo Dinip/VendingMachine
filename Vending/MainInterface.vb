@@ -1,6 +1,4 @@
 ﻿Public Class MainInterface
-    Dim selection As Integer
-    Dim password As String
     Private Sub MainInterface_Load(sender As Object, e As EventArgs) Handles Me.Load
         ' coins_in_btn
         coin_in_btn.FlatStyle = FlatStyle.Flat
@@ -31,7 +29,8 @@
         admin_btn.FlatAppearance.MouseDownBackColor = Color.Transparent
 
         ' Sets default saldo (0€)
-        saldo_lbl.Text = "0€"
+        saldo = 0
+        saldo_lbl.Text = saldo & "€"
 
         ' Sets prices
         price(1) = 1.2
@@ -49,10 +48,14 @@
         price(13) = 1.45
 
         ' Stock manager (just to set random default stocks, admin interface has a button to restock)
-        For num As Integer = 1 To 13
-            stock(num) = Int((16 * Rnd()) + 1)
-        Next
+        stocks(10)
+    End Sub
 
+    Sub stocks(ByVal rand As Integer)
+        Randomize()
+        For num As Integer = 1 To 13
+            stock(num) = Int((rand * Rnd()) + 1)
+        Next
     End Sub
 
     Private Sub keys_btn_Click(sender As Object, e As EventArgs) Handles keys_btn.Click
@@ -67,13 +70,16 @@
         My.Computer.Audio.Play(My.Resources.coin_drop, AudioPlayMode.WaitToComplete)
         MsgBox("Troco de " & saldo & "€ recebido.")
         saldo = 0
-        saldo_lbl.Text = "0€"
+        saldo_lbl.Text = saldo & "€"
     End Sub
 
     Private Sub admin_btn_Click(sender As Object, e As EventArgs) Handles admin_btn.Click
-        password = InputBox("Insert manager password:")
-        If password = "aplicações" Then
+        Dim password As String
+        password = InputBox("Insira a password de administração:")
+        If password = "ai" Then
             admin.Show()
+        Else
+            MsgBox("Password errada! Tente novamente.")
         End If
     End Sub
 End Class

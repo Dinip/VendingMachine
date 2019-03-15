@@ -3,6 +3,7 @@
 Public Class Keypad
     Dim instock As Boolean = True
     Dim hasmoney As Boolean = True
+    Dim found As Boolean = True
 
     Private Sub Keypad_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' WIP keypad_screen_lbl.Text = numero
@@ -105,11 +106,12 @@ Public Class Keypad
     End Sub
 
     Sub clear()
-        If keypad_screen_lbl.Text = ("Item não" & vbNewLine & "encontrado!") Or (instock = False) Or (hasmoney = False) Then
+        If (found = False) Or (instock = False) Or (hasmoney = False) Then
             keypad_screen_lbl.Text = ""
             Me.Refresh()
             keypad_screen_lbl.Font = New Font("Microsoft Sans Serif", 32, FontStyle.Bold)
             keypad_screen_lbl.TextAlign = ContentAlignment.MiddleCenter
+            found = True
             instock = True
             hasmoney = True
         End If
@@ -190,18 +192,19 @@ Public Class Keypad
     End Sub
 
     Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
-        Dim counter As Integer = 10000
+        Dim counter As Integer = 1000
         clear()
         ' Sets var numero equals to label val
         numero = Val(keypad_screen_lbl.Text)
 
         'Text font and alignment ajusts 
         keypad_screen_lbl.Font = New Font("Microsoft Sans Serif", 16, FontStyle.Bold)
-        keypad_screen_lbl.TextAlign = ContentAlignment.TopLeft
+        keypad_screen_lbl.TextAlign = ContentAlignment.MiddleLeft
 
         ' Verifies if the number isn't outside of the allowed range.
         If (numero < 1) Or (numero > 13) Then
             keypad_screen_lbl.Text = "Item não" & vbNewLine & "encontrado!"
+            found = False
             MainInterface.Controls("keypad_screen_lbl").Text = ""
         Else
             keypad_screen_lbl.Text = "Preço: " & price(numero) & " €"
@@ -209,6 +212,8 @@ Public Class Keypad
             If price(numero) > saldo Then
                 keypad_screen_lbl.Text = "Artigo: " & numero & vbNewLine & "Saldo insuficiente" & vbNewLine & "Insira " & price(numero) & "€"
                 hasmoney = False
+                ' If there is not enough money, open coins_insert
+                'Coins_Insert.Show()
             Else
                 ' Verifies if the stock ins't lower than 1
                 If stock(numero) < 1 Then
@@ -224,16 +229,16 @@ Public Class Keypad
 
                     ' Counter just to delay form closing after buy complete
                     While counter > 0
-                        counter -= 1
+                        counter = counter - 0.75
                     End While
 
                     Me.Close()
                 End If
-
             End If
         End If
     End Sub
 
+    'Needs fix. Change if to variables
     Private Sub Keypad_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         If (keypad_screen_lbl.Text = ("Artigo: " & numero & vbNewLine & "Saldo insuficiente.")) Then
             MainInterface.Controls("keypad_screen_lbl").Text = numero
