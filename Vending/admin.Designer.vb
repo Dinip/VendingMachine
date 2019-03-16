@@ -36,7 +36,6 @@ Partial Class admin
         Me.stock_lbl.Name = "stock_lbl"
         Me.stock_lbl.Size = New System.Drawing.Size(84, 235)
         Me.stock_lbl.TabIndex = 0
-        Me.stock_lbl.Text = "Stocks:"
         '
         'restock_btn
         '
