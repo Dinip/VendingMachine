@@ -201,17 +201,17 @@ Public Class Keypad
             MainInterface.Controls("keypad_screen_lbl").Text = ""
         Else
             keypad_screen_lbl.Text = "Preço: " & price(numero) & " €"
-            ' Verifies if the price isn't higher than the balance
-            If price(numero) > saldo Then
-                keypad_screen_lbl.Text = "Artigo: " & numero & vbNewLine & "Saldo insuficiente" & vbNewLine & "Insira " & price(numero) & "€"
-                hasmoney = False
-                ' If there is not enough money, open coins_insert
-                'Coins_Insert.Show()
+            ' Verifies if the stock ins't lower than 1
+            If stock(numero) < 1 Then
+                keypad_screen_lbl.Text = "Stock insuficiente."
+                instock = False
             Else
-                ' Verifies if the stock ins't lower than 1
-                If stock(numero) < 1 Then
-                    keypad_screen_lbl.Text = "Stock insuficiente."
-                    instock = False
+                ' Verifies if the price isn't higher than the balance
+                If price(numero) > saldo Then
+                    keypad_screen_lbl.Text = "Artigo: " & numero & vbNewLine & "Saldo insuficiente" & vbNewLine & "Insira " & price(numero) & "€"
+                    hasmoney = False
+                    ' If there is not enough money, open coins_insert
+                    'Coins_Insert.Show()
                 Else
                     keypad_screen_lbl.Text = keypad_screen_lbl.Text & vbNewLine & "Compra sucedida!"
                     Me.Refresh()
