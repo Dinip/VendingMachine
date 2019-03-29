@@ -34,18 +34,35 @@
 
         ' Sets prices
         price(1) = 1.2
-        price(2) = 1.35
-        price(3) = 1.35
-        price(4) = 1.35
+        price(2) = 1.2
+        price(3) = 1.2
+        price(4) = 1.2
         price(5) = 1.35
-        price(6) = 1.15
-        price(7) = 1.15
-        price(8) = 1.25
-        price(9) = 0.9
-        price(10) = 0.9
-        price(11) = 0.9
-        price(12) = 1.05
-        price(13) = 1.45
+        price(6) = 1.35
+        price(7) = 1.35
+        price(8) = 1.35
+        price(9) = 1.15
+        price(10) = 1.15
+        price(11) = 1.15
+        price(12) = 1.15
+        price(13) = 1.25
+        price(14) = 1.25
+        price(15) = 1.25
+        price(16) = 1.25
+        price(17) = 0.9
+        price(18) = 0.9
+        price(19) = 0.9
+        price(20) = 0.9
+        price(21) = 0.9
+        price(22) = 0.9
+        price(23) = 0.9
+        price(24) = 1.05
+        price(25) = 1.05
+        price(26) = 1.45
+        price(27) = 1.45
+        price(28) = 1.05
+        price(29) = 1.05
+        price(30) = 1.45
 
         ' Stock manager (just to set random default stocks, admin interface has a button to restock)
         stocks(10)
@@ -53,7 +70,7 @@
 
     Sub stocks(ByVal rand As Integer)
         Randomize()
-        For num As Integer = 1 To 13
+        For num As Integer = 1 To 30
             stock(num) = Int((rand * Rnd()) + 1)
         Next
     End Sub

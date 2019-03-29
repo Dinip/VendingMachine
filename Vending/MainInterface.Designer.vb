@@ -109,7 +109,7 @@ Partial Class MainInterface
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(14, 13)
         Me.Label2.TabIndex = 6
-        Me.Label2.Text = "1"
+        Me.Label2.Text = "2"
         '
         'Label3
         '
@@ -120,7 +120,7 @@ Partial Class MainInterface
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(14, 13)
         Me.Label3.TabIndex = 7
-        Me.Label3.Text = "1"
+        Me.Label3.Text = "3"
         '
         'Label4
         '
@@ -131,7 +131,7 @@ Partial Class MainInterface
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(14, 13)
         Me.Label4.TabIndex = 8
-        Me.Label4.Text = "1"
+        Me.Label4.Text = "4"
         '
         'Label5
         '
@@ -142,7 +142,7 @@ Partial Class MainInterface
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(14, 13)
         Me.Label5.TabIndex = 9
-        Me.Label5.Text = "2"
+        Me.Label5.Text = "5"
         '
         'Label6
         '
@@ -153,7 +153,7 @@ Partial Class MainInterface
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(14, 13)
         Me.Label6.TabIndex = 10
-        Me.Label6.Text = "3"
+        Me.Label6.Text = "6"
         '
         'Label7
         '
@@ -164,7 +164,7 @@ Partial Class MainInterface
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(14, 13)
         Me.Label7.TabIndex = 11
-        Me.Label7.Text = "4"
+        Me.Label7.Text = "7"
         '
         'Label8
         '
@@ -175,7 +175,7 @@ Partial Class MainInterface
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(14, 13)
         Me.Label8.TabIndex = 12
-        Me.Label8.Text = "5"
+        Me.Label8.Text = "8"
         '
         'Label9
         '
@@ -186,7 +186,7 @@ Partial Class MainInterface
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(14, 13)
         Me.Label9.TabIndex = 13
-        Me.Label9.Text = "6"
+        Me.Label9.Text = "9"
         '
         'Label10
         '
@@ -195,9 +195,9 @@ Partial Class MainInterface
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(221, 332)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(14, 13)
+        Me.Label10.Size = New System.Drawing.Size(21, 13)
         Me.Label10.TabIndex = 14
-        Me.Label10.Text = "6"
+        Me.Label10.Text = "10"
         '
         'Label11
         '
@@ -206,9 +206,9 @@ Partial Class MainInterface
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(330, 332)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(14, 13)
+        Me.Label11.Size = New System.Drawing.Size(21, 13)
         Me.Label11.TabIndex = 15
-        Me.Label11.Text = "7"
+        Me.Label11.Text = "11"
         '
         'Label12
         '
@@ -217,9 +217,9 @@ Partial Class MainInterface
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.Location = New System.Drawing.Point(444, 332)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(14, 13)
+        Me.Label12.Size = New System.Drawing.Size(21, 13)
         Me.Label12.TabIndex = 16
-        Me.Label12.Text = "7"
+        Me.Label12.Text = "12"
         '
         'Label13
         '
@@ -228,9 +228,9 @@ Partial Class MainInterface
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.Location = New System.Drawing.Point(103, 430)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(14, 13)
+        Me.Label13.Size = New System.Drawing.Size(21, 13)
         Me.Label13.TabIndex = 17
-        Me.Label13.Text = "8"
+        Me.Label13.Text = "13"
         '
         'Label14
         '
@@ -239,9 +239,9 @@ Partial Class MainInterface
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.Location = New System.Drawing.Point(219, 430)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(14, 13)
+        Me.Label14.Size = New System.Drawing.Size(21, 13)
         Me.Label14.TabIndex = 18
-        Me.Label14.Text = "8"
+        Me.Label14.Text = "14"
         '
         'Label15
         '
@@ -250,9 +250,9 @@ Partial Class MainInterface
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.Location = New System.Drawing.Point(329, 430)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(14, 13)
+        Me.Label15.Size = New System.Drawing.Size(21, 13)
         Me.Label15.TabIndex = 19
-        Me.Label15.Text = "8"
+        Me.Label15.Text = "15"
         '
         'Label16
         '
@@ -261,9 +261,9 @@ Partial Class MainInterface
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.Location = New System.Drawing.Point(443, 431)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(14, 13)
+        Me.Label16.Size = New System.Drawing.Size(21, 13)
         Me.Label16.TabIndex = 20
-        Me.Label16.Text = "8"
+        Me.Label16.Text = "16"
         '
         'Label17
         '
@@ -272,9 +272,9 @@ Partial Class MainInterface
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.Location = New System.Drawing.Point(84, 527)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(14, 13)
+        Me.Label17.Size = New System.Drawing.Size(21, 13)
         Me.Label17.TabIndex = 21
-        Me.Label17.Text = "9"
+        Me.Label17.Text = "17"
         '
         'Label18
         '
@@ -283,9 +283,9 @@ Partial Class MainInterface
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.Location = New System.Drawing.Point(147, 527)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(14, 13)
+        Me.Label18.Size = New System.Drawing.Size(21, 13)
         Me.Label18.TabIndex = 22
-        Me.Label18.Text = "9"
+        Me.Label18.Text = "18"
         '
         'Label19
         '
@@ -294,9 +294,9 @@ Partial Class MainInterface
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.Location = New System.Drawing.Point(208, 527)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(14, 13)
+        Me.Label19.Size = New System.Drawing.Size(21, 13)
         Me.Label19.TabIndex = 23
-        Me.Label19.Text = "9"
+        Me.Label19.Text = "19"
         '
         'Label20
         '
@@ -307,7 +307,7 @@ Partial Class MainInterface
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(21, 13)
         Me.Label20.TabIndex = 24
-        Me.Label20.Text = "10"
+        Me.Label20.Text = "20"
         '
         'Label21
         '
@@ -318,7 +318,7 @@ Partial Class MainInterface
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(21, 13)
         Me.Label21.TabIndex = 25
-        Me.Label21.Text = "10"
+        Me.Label21.Text = "21"
         '
         'Label22
         '
@@ -329,7 +329,7 @@ Partial Class MainInterface
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(21, 13)
         Me.Label22.TabIndex = 26
-        Me.Label22.Text = "11"
+        Me.Label22.Text = "22"
         '
         'Label23
         '
@@ -340,7 +340,7 @@ Partial Class MainInterface
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(21, 13)
         Me.Label23.TabIndex = 27
-        Me.Label23.Text = "11"
+        Me.Label23.Text = "23"
         '
         'Label24
         '
@@ -351,7 +351,7 @@ Partial Class MainInterface
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(21, 13)
         Me.Label24.TabIndex = 28
-        Me.Label24.Text = "12"
+        Me.Label24.Text = "24"
         '
         'Label25
         '
@@ -362,7 +362,7 @@ Partial Class MainInterface
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(21, 13)
         Me.Label25.TabIndex = 29
-        Me.Label25.Text = "12"
+        Me.Label25.Text = "25"
         '
         'Label26
         '
@@ -373,7 +373,7 @@ Partial Class MainInterface
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(21, 13)
         Me.Label26.TabIndex = 30
-        Me.Label26.Text = "12"
+        Me.Label26.Text = "28"
         '
         'Label27
         '
@@ -384,7 +384,7 @@ Partial Class MainInterface
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(21, 13)
         Me.Label27.TabIndex = 31
-        Me.Label27.Text = "12"
+        Me.Label27.Text = "29"
         '
         'Label28
         '
@@ -395,7 +395,7 @@ Partial Class MainInterface
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(21, 13)
         Me.Label28.TabIndex = 32
-        Me.Label28.Text = "13"
+        Me.Label28.Text = "26"
         '
         'Label29
         '
@@ -406,7 +406,7 @@ Partial Class MainInterface
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(21, 13)
         Me.Label29.TabIndex = 33
-        Me.Label29.Text = "13"
+        Me.Label29.Text = "27"
         '
         'Label30
         '
@@ -417,7 +417,7 @@ Partial Class MainInterface
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(21, 13)
         Me.Label30.TabIndex = 34
-        Me.Label30.Text = "13"
+        Me.Label30.Text = "30"
         '
         'coin_in_btn
         '

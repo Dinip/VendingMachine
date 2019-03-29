@@ -195,7 +195,7 @@ Public Class Keypad
         keypad_screen_lbl.TextAlign = ContentAlignment.MiddleLeft
 
         ' Verifies if the number isn't outside of the allowed range.
-        If (numero < 1) Or (numero > 13) Then
+        If (numero < 1) Or (numero > 30) Then
             keypad_screen_lbl.Text = "Item não" & vbNewLine & "encontrado!"
             found = False
             MainInterface.Controls("keypad_screen_lbl").Text = ""

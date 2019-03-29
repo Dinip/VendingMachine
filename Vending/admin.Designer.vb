@@ -34,7 +34,7 @@ Partial Class admin
         Me.stock_lbl.ForeColor = System.Drawing.SystemColors.Control
         Me.stock_lbl.Location = New System.Drawing.Point(220, 9)
         Me.stock_lbl.Name = "stock_lbl"
-        Me.stock_lbl.Size = New System.Drawing.Size(84, 235)
+        Me.stock_lbl.Size = New System.Drawing.Size(125, 502)
         Me.stock_lbl.TabIndex = 0
         '
         'restock_btn
@@ -56,7 +56,7 @@ Partial Class admin
         Me.price_lbl.ForeColor = System.Drawing.SystemColors.Control
         Me.price_lbl.Location = New System.Drawing.Point(12, 9)
         Me.price_lbl.Name = "price_lbl"
-        Me.price_lbl.Size = New System.Drawing.Size(81, 235)
+        Me.price_lbl.Size = New System.Drawing.Size(81, 502)
         Me.price_lbl.TabIndex = 2
         '
         'admin
@@ -64,7 +64,7 @@ Partial Class admin
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.WindowFrame
-        Me.ClientSize = New System.Drawing.Size(316, 260)
+        Me.ClientSize = New System.Drawing.Size(357, 520)
         Me.Controls.Add(Me.price_lbl)
         Me.Controls.Add(Me.restock_btn)
         Me.Controls.Add(Me.stock_lbl)
