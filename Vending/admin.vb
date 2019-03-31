@@ -24,7 +24,7 @@
                 If stock(num) < 10 Then
                     stock_lbl.Text = stock_lbl.Text & vbNewLine & "0" & num & " => " & "0" & stock(num) & " artigos"
                 Else
-                    stock_lbl.Text = stock_lbl.Text & vbNewLine & "0" & num & " => " & stock(num) & "artigos"
+                    stock_lbl.Text = stock_lbl.Text & vbNewLine & "0" & num & " => " & stock(num) & " artigos"
                 End If
             Else
                 If stock(num) < 10 Then

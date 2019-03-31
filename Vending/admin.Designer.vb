@@ -42,7 +42,7 @@ Partial Class admin
         Me.restock_btn.BackColor = System.Drawing.Color.Gray
         Me.restock_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.restock_btn.ForeColor = System.Drawing.SystemColors.Control
-        Me.restock_btn.Location = New System.Drawing.Point(103, 9)
+        Me.restock_btn.Location = New System.Drawing.Point(109, 9)
         Me.restock_btn.Name = "restock_btn"
         Me.restock_btn.Size = New System.Drawing.Size(89, 69)
         Me.restock_btn.TabIndex = 1
@@ -64,7 +64,7 @@ Partial Class admin
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.WindowFrame
-        Me.ClientSize = New System.Drawing.Size(357, 520)
+        Me.ClientSize = New System.Drawing.Size(338, 520)
         Me.Controls.Add(Me.price_lbl)
         Me.Controls.Add(Me.restock_btn)
         Me.Controls.Add(Me.stock_lbl)

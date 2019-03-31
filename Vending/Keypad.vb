@@ -4,6 +4,7 @@ Public Class Keypad
     Dim instock As Boolean = True
     Dim hasmoney As Boolean = True
     Dim found As Boolean = True
+    Dim firsttime As Boolean = True
 
     Private Sub Keypad_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Label prop changing to default values
@@ -104,7 +105,7 @@ Public Class Keypad
     End Sub
 
     Sub clear()
-        If (found = False) Or (instock = False) Or (hasmoney = False) Then
+        If (found = False) Or (instock = False) Or (hasmoney = False) Or (firsttime = False) Then
             keypad_screen_lbl.Text = ""
             MainInterface.Controls("keypad_screen_lbl").Text = keypad_screen_lbl.Text
             Me.Refresh()
@@ -113,6 +114,7 @@ Public Class Keypad
             found = True
             instock = True
             hasmoney = True
+            firsttime = True
         End If
     End Sub
 
@@ -186,9 +188,11 @@ Public Class Keypad
     End Sub
 
     Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
-        clear()
+        'clear()
         ' Sets var numero equals to label value
-        numero = Val(keypad_screen_lbl.Text)
+        If firsttime = True Then
+            numero = Val(keypad_screen_lbl.Text)
+        End If
 
         ' Text font and alignment ajusts 
         keypad_screen_lbl.Font = New Font("Microsoft Sans Serif", 16, FontStyle.Bold)
@@ -206,24 +210,33 @@ Public Class Keypad
                 keypad_screen_lbl.Text = "Stock insuficiente."
                 instock = False
             Else
-                ' Verifies if the price isn't higher than the balance
-                If price(numero) > saldo Then
-                    keypad_screen_lbl.Text = "Artigo: " & numero & vbNewLine & "Saldo insuficiente" & vbNewLine & "Insira " & price(numero) & "€"
-                    hasmoney = False
-                    ' If there is not enough money, open coins_insert
-                    'Coins_Insert.Show()
+                If firsttime = True Then
+                    keypad_screen_lbl.Text = "Artigo: " & numero & vbNewLine & "Preço: " & price(numero) & "€" & vbNewLine & "OK para comprar"
+                    firsttime = False
                 Else
-                    keypad_screen_lbl.Text = keypad_screen_lbl.Text & vbNewLine & "Compra sucedida!"
-                    Me.Refresh()
-                    stock(numero) -= 1
-                    saldo -= price(numero)
-                    My.Computer.Audio.Play(My.Resources.mario, AudioPlayMode.WaitToComplete)
-                    MainInterface.Controls("saldo_lbl").Text = FormatNumber(saldo, 2) & "€"
-                    ' Counter just to delay form closing after buy complete
-                    Threading.Thread.Sleep(1000)
-                    Me.Close()
+                    ' Verifies if the price isn't higher than the balance
+                    If price(numero) > saldo Then
+                        keypad_screen_lbl.Text = "Artigo: " & numero & vbNewLine & "Saldo insuficiente" & vbNewLine & "Insira + " & FormatNumber(price(numero) - saldo, 2) & "€"
+                        hasmoney = False
+                        firsttime = True
+                    Else
+                        keypad_screen_lbl.Text = keypad_screen_lbl.Text & vbNewLine & "Compra sucedida!"
+                        Me.Refresh()
+                        stock(numero) -= 1
+                        saldo -= price(numero)
+                        firsttime = True
+                        My.Computer.Audio.Play(My.Resources.mario, AudioPlayMode.WaitToComplete)
+                        MainInterface.Controls("saldo_lbl").Text = FormatNumber(saldo, 2) & "€"
+                        ' Counter just to delay form closing after buy complete
+                        Threading.Thread.Sleep(1000)
+                        Me.Close()
+                    End If
                 End If
             End If
         End If
+    End Sub
+
+    Private Sub Keypad_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        MainInterface.Controls("keypad_screen_lbl").Text = ""
     End Sub
 End Class

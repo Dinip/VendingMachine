@@ -79,7 +79,7 @@ Public Class Coins_Insert
     Sub updatelbl(ByVal coin As Single)
         saldo += coin
         MainInterface.Controls("saldo_lbl").Text = FormatNumber(saldo, 2) & "€"
-        saldo_lbl.Text = "+" & FormatNumber(coin, 2) & " €" & vbNewLine & "Saldo: " & FormatNumber(saldo, 2) & "€"
+        saldo_lbl.Text = "+ " & FormatNumber(coin, 2) & " €" & vbNewLine & "Saldo: " & FormatNumber(saldo, 2) & "€"
     End Sub
 
     Private Sub btn1c_Click(sender As Object, e As EventArgs) Handles btn1c.Click

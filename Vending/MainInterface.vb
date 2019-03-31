@@ -1,4 +1,6 @@
-﻿Public Class MainInterface
+﻿Imports System.ComponentModel
+
+Public Class MainInterface
     Private Sub MainInterface_Load(sender As Object, e As EventArgs) Handles Me.Load
         ' coins_in_btn
         coin_in_btn.FlatStyle = FlatStyle.Flat
@@ -85,9 +87,9 @@
 
     Private Sub coin_out_btn_Click(sender As Object, e As EventArgs) Handles coin_out_btn.Click
         My.Computer.Audio.Play(My.Resources.coin_drop, AudioPlayMode.WaitToComplete)
-        MsgBox("Troco de " & saldo & "€ recebido.")
+        MsgBox("Troco de " & FormatNumber(saldo, 2) & "€ recebido.")
         saldo = 0
-        saldo_lbl.Text = saldo & "€"
+        saldo_lbl.Text = FormatNumber(saldo, 2) & "€"
     End Sub
 
     Private Sub admin_btn_Click(sender As Object, e As EventArgs) Handles admin_btn.Click
@@ -97,6 +99,14 @@
             admin.Show()
         Else
             MsgBox("Password errada! Tente novamente.")
+        End If
+    End Sub
+
+    ' Won't let the machine close if there it has money
+    Private Sub MainInterface_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        If saldo > 0 Then
+            MsgBox("Receba o troco antes de fechar")
+            e.Cancel = True
         End If
     End Sub
 End Class
