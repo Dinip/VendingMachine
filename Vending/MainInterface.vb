@@ -23,13 +23,6 @@ Public Class MainInterface
         coin_out_btn.FlatAppearance.MouseOverBackColor = Color.Transparent
         coin_out_btn.FlatAppearance.MouseDownBackColor = Color.Transparent
 
-        ' stock_btn
-        admin_btn.FlatStyle = FlatStyle.Flat
-        admin_btn.BackColor = Color.Transparent
-        admin_btn.FlatAppearance.BorderSize = 0
-        admin_btn.FlatAppearance.MouseOverBackColor = Color.Transparent
-        admin_btn.FlatAppearance.MouseDownBackColor = Color.Transparent
-
         ' Sets default saldo (0€)
         saldo = 0
         saldo_lbl.Text = saldo & "€"
@@ -90,16 +83,6 @@ Public Class MainInterface
         MsgBox("Troco de " & FormatNumber(saldo, 2) & "€ recebido.")
         saldo = 0
         saldo_lbl.Text = FormatNumber(saldo, 2) & "€"
-    End Sub
-
-    Private Sub admin_btn_Click(sender As Object, e As EventArgs) Handles admin_btn.Click
-        Dim password As String
-        password = InputBox("Insira a password de administração:")
-        If password = "ai" Then
-            admin.Show()
-        Else
-            MsgBox("Password errada! Tente novamente.")
-        End If
     End Sub
 
     ' Won't let the machine close if there it has money

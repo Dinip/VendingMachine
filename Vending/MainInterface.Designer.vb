@@ -57,7 +57,6 @@ Partial Class MainInterface
         Me.coin_in_btn = New System.Windows.Forms.Button()
         Me.saldo_lbl = New System.Windows.Forms.Label()
         Me.coin_out_btn = New System.Windows.Forms.Button()
-        Me.admin_btn = New System.Windows.Forms.Button()
         Me.info = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
@@ -459,18 +458,6 @@ Partial Class MainInterface
         Me.coin_out_btn.TabIndex = 38
         Me.coin_out_btn.UseVisualStyleBackColor = False
         '
-        'admin_btn
-        '
-        Me.admin_btn.BackColor = System.Drawing.Color.Transparent
-        Me.admin_btn.Cursor = System.Windows.Forms.Cursors.No
-        Me.admin_btn.FlatAppearance.BorderSize = 0
-        Me.admin_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.admin_btn.Location = New System.Drawing.Point(585, 840)
-        Me.admin_btn.Name = "admin_btn"
-        Me.admin_btn.Size = New System.Drawing.Size(75, 23)
-        Me.admin_btn.TabIndex = 39
-        Me.admin_btn.UseVisualStyleBackColor = False
-        '
         'info
         '
         Me.info.BackColor = System.Drawing.Color.Transparent
@@ -492,7 +479,6 @@ Partial Class MainInterface
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(684, 888)
         Me.Controls.Add(Me.info)
-        Me.Controls.Add(Me.admin_btn)
         Me.Controls.Add(Me.coin_out_btn)
         Me.Controls.Add(Me.saldo_lbl)
         Me.Controls.Add(Me.coin_in_btn)
@@ -574,7 +560,6 @@ Partial Class MainInterface
     Friend WithEvents coin_in_btn As Button
     Friend WithEvents saldo_lbl As Label
     Friend WithEvents coin_out_btn As Button
-    Friend WithEvents admin_btn As Button
     Friend WithEvents Timer1 As Timer
     Friend WithEvents info As Label
 End Class

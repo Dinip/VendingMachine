@@ -1,6 +1,7 @@
 ﻿Imports System.ComponentModel
 
 Public Class Keypad
+    Dim numero As Integer
     Dim instock As Boolean = True
     Dim hasmoney As Boolean = True
     Dim found As Boolean = True
@@ -122,8 +123,12 @@ Public Class Keypad
         keypad_screen_lbl.Text = keypad_screen_lbl.Text & button
         MainInterface.Controls("keypad_screen_lbl").Text = keypad_screen_lbl.Text
         If Len(keypad_screen_lbl.Text) > 2 Then
-            keypad_screen_lbl.Text = button
-            MainInterface.Controls("keypad_screen_lbl").Text = keypad_screen_lbl.Text
+            If Val(keypad_screen_lbl.Text) = 116 Then
+                admin.Show()
+            Else
+                keypad_screen_lbl.Text = button
+                MainInterface.Controls("keypad_screen_lbl").Text = keypad_screen_lbl.Text
+            End If
         End If
     End Sub
 
